@@ -59,4 +59,9 @@ return require('packer').startup(function(use)
             vim.o.timeoutlen = 500
         end
     }
+
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
 end)
