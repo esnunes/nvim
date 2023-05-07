@@ -14,7 +14,7 @@ lsp.on_attach(function(client, bufnr)
     end
 
     vim.keymap.set("n", "gR", function() vim.lsp.buf.rename() end, opts("lsp: rename"))
-    vim.keymap.set("n", "gc", function() vim.lsp.buf.code_action() end, opts("lsp: code actions"))
+    vim.keymap.set("n", "ga", function() vim.lsp.buf.code_action() end, opts("lsp: code actions"))
     vim.keymap.set("n", "g=", function() vim.lsp.buf.format({ async = true }) end, opts("lsp: format"))
 end)
 
