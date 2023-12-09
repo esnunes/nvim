@@ -1,5 +1,8 @@
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
+-- make <C-c> behave exactly as <Esc>
+vim.keymap.set({"n", "v"}, "<C-c>", "<Esc>")
+
 -- move selected block
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -13,8 +16,7 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 -- copy to OS clipboard
-vim.keymap.set("n", "<leader>y", "\"+y")
-vim.keymap.set("v", "<leader>y", "\"+y")
+vim.keymap.set({"n", "v"}, "<leader>y", "\"+y")
 vim.keymap.set("v", "y", "\"+y")
 
 -- open project
