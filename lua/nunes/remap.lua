@@ -15,6 +15,7 @@ vim.keymap.set("n", "N", "Nzzzv")
 -- copy to OS clipboard
 vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("v", "<leader>y", "\"+y")
+vim.keymap.set("v", "y", "\"+y")
 
 -- open project
 vim.keymap.set("n", "<leader>pp", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
