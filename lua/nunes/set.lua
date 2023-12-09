@@ -26,3 +26,6 @@ vim.opt.swapfile = false
 vim.opt.backup = false
 
 vim.g.mapleader = " "
+
+-- disable omni sql completion that conflicts with <C-c>
+vim.g.omni_sql_no_default_maps = 1
