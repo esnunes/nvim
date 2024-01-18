@@ -40,7 +40,7 @@ return {
         end,
 
         ["templ"] = function()
-          local opts = {}
+          local opts = { capabilities = capabilities }
 
           -- use local version of templ lsp if possible
           local cmd_path = vim.loop.fs_realpath(vim.fn.getcwd() .. "/.bin/templ")
@@ -49,7 +49,7 @@ return {
           end
 
           require("lspconfig").templ.setup(opts)
-        end
+        end,
       },
     })
 
