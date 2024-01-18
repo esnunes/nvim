@@ -57,20 +57,20 @@ vim.api.nvim_create_autocmd("LspAttach", {
           a = { vim.lsp.buf.code_action, "actions" },
           d = { vim.lsp.buf.definition, "definition" },
           D = { vim.lsp.buf.declaration, "declaration" },
-          f = {
+          f = { vim.lsp.buf.format, "format" },
+          i = { "<cmd>Telescope lsp_implementations<cr>", "implementations" },
+          s = {
             name = "symbols",
             d = { "<cmd>Telescope lsp_document_symbols<cr>", "document" },
             w = { "<cmd>Telescope lsp_workspace_symbols<cr>", "workspace" },
           },
-          i = { "<cmd>Telescope lsp_implementations<cr>", "implementations" },
           r = { "<cmd>Telescope lsp_references<cr>", "references" },
           R = { vim.lsp.buf.rename, "rename" },
-          s = {
+          ["="] = {
             name = "server",
             r = { "<cmd>LspRestart<cr>", "restart" },
             i = { "<cmd>LspInfo<cr>", "info" },
           },
-          ["="] = { vim.lsp.buf.format, "format" },
         },
       },
     }, { buffer = ev.buf })
@@ -112,13 +112,3 @@ do
     },
   })
 end
-
--- ui
--- vim.diagnostic.config({
---  virtual_text = false,
---  severity_sort = true,
---  float = {
---    border = 'rounded',
---    source = 'always',
---  },
---})
