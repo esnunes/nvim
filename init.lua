@@ -49,6 +49,10 @@ vim.api.nvim_create_autocmd("LspAttach", {
     local wk = require("which-key")
 
     wk.register({
+      ["<C-k>"] = { vim.lsp.buf.signature_help, "signature help" },
+    }, { mode = "i" })
+
+    wk.register({
       K = { vim.lsp.buf.hover, "hover" },
 
       ["<leader>"] = {
