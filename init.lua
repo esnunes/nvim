@@ -7,6 +7,7 @@ vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.autoread = true
 
+vim.opt.cursorline = true
 vim.opt.colorcolumn = "120"
 vim.opt.nu = true
 vim.opt.relativenumber = true
