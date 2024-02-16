@@ -18,6 +18,10 @@ vim.opt.termguicolors = true
 vim.filetype.add({
   extension = {
     templ = "templ",
+
+    tf = "terraform",
+    tfvars = "terraform",
+    tfstate = "json",
   },
 })
 
