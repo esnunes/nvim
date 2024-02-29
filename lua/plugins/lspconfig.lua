@@ -51,6 +51,18 @@ return {
           })
         end,
 
+        ["gopls"] = function()
+          local opts = { capabilities = capabilities }
+
+          -- use local version of gopls if possible
+          local cmd_path = vim.loop.fs_realpath(vim.fn.getcwd() .. "/.bin/gopls")
+          if cmd_path ~= nil and vim.fn.filereadable(cmd_path) then
+            opts.cmd = { cmd_path }
+          end
+
+          require("lspconfig").gopls.setup(opts)
+        end,
+
         ["templ"] = function()
           local opts = { capabilities = capabilities }
 
