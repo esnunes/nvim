@@ -14,6 +14,10 @@ vim.opt.relativenumber = true
 vim.opt.wrap = false
 vim.opt.termguicolors = true
 
+-- case-insensitive searching UNLESS \C or capital in search
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+
 -- file types
 vim.filetype.add({
   extension = {
